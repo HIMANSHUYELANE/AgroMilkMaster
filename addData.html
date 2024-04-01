@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Admin</title>
+</head>
+
+<body>
+    <h1  class="text-center font-extrabold border-b-4 my-7 py-4 border-t-4 border-double border-cyan-500 text-3xl">Admin Data Handler</h1>
+    <section class="w-[95%] mx-auto">
+        <div>
+            <p id="pop1" class="absolute text-md top-10 right-32 bg-cyan-400 rounded-lg py-1 px-3 hidden">Data Saved Successufully</p>
+            <p id="pop2"class="absolute text-md top-10 right-32 bg-cyan-400 rounded-lg py-1 px-3 hidden">Data Updated Successufully</p>
+            <p id="pop3" class="absolute text-md top-10 right-32 bg-cyan-400 rounded-lg py-1 px-3 hidden">Data Deleted Successufully</p>
+            <p id="pop4" class="absolute text-md top-10 right-32 bg-cyan-400 rounded-lg py-1 px-3 hidden">Invalid Id Provided</p>
+        </div>
+        <div class="w-[65%] my-7 mx-auto">
+        <h1 class=" text-lg font-bold">User Information</h1>
+        <label for="">Select Month</label>
+        <input id="month" class="border-2 border-black bg-gray-200 rounded-md px-2 "  type="month" placeholder="Month">
+        <label for="">User Name</label>
+        <input id="id" class="border-2 border-black bg-gray-200 rounded-md px-2 "  type="text" placeholder="Name Of User">
+        </div>
+        <h2 class="text-center text-lg font-bold">User Data</h2>
+        <div class="flex justify-center flex-wrap ">
+            <div class="flex flex-col mx-5">
+                 <p class="text-center my-2 font-semibold">Milk</p>
+                 <label for="">First Week</label>
+                 <input id="firstmilk" class="border-2 border-black bg-gray-200 rounded-md px-2 "  type="number">
+                 <label for="">Second Week</label>
+                 <input id="secondtmilk" class="border-2 border-black bg-gray-200 rounded-md px-2 "  type="number" name="" id="">
+                 <label for="">Third Week</label>
+                 <input id="thirdmilk" class="border-2 border-black bg-gray-200 rounded-md px-2 "  type="number">
+            </div>
+            <div class="flex flex-col mx-5">
+                <p class="text-center my-2 font-semibold">Amount</p>
+                <label for="">First Week</label>
+                <input id="firstamount" class="border-2 border-black bg-gray-200 rounded-md px-2 "  type="number">
+                <label for="">Second Week</label>
+                <input id="secondamount" class="border-2 border-black bg-gray-200 rounded-md px-2 "  type="number">
+                <label for="">Third Week</label>
+                <input id="thirdamount"  class="border-2 border-black bg-gray-200 rounded-md px-2 " type="number">
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-center space-x-5 my-4 ">
+            <button id="btn" class="text-xl font-semibold border-2 rounded-lg px-3">Save</button>
+            <button id="btn1" class="text-xl font-semibold border-2 rounded-lg px-3">Update</button>
+            <button id="btn2" class="text-xl font-semibold border-2 rounded-lg px-3">Delete</button>
+        </div>
+    </section>
+</body>
+
+<script src="addData.js" type="module"></script>
+
+</html>

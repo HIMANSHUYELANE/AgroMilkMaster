@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="">
+    <title>Member Add</title>
+</head>
+<body>
+    <section class="flex flex-col w-[65%] mx-auto my-[5rem] ">
+        <label  class="mx-auto" for="">Member code</label>
+        <input class="border-2 px-2 w-[35%] mx-auto border-gray rounded-md" id="memno" placeholder="Code_No" type="number">
+        <label class="mx-auto mt-5" for="">Member Name</label>
+        <input  class="border-2 px-2 w-[35%] mx-auto border-gray rounded-md" id="memname" placeholder="M_Name" type="text">
+        <button id="sbtn" class="px-2 mt-5 w-[30%] mx-auto  border-2 rounded-md border-black text-lg font-semibold">Save</button>
+        <button id="ubtn" class="px-2 mt-5 w-[30%] mx-auto  border-2 rounded-md border-black text-lg font-semibold">Update</button>
+        <button id="dbtn" class="px-2 mt-5 w-[30%] mx-auto  border-2 rounded-md border-black text-lg font-semibold">Delete</button>
+    </section>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAXrcQ8a7TGcSv87F_hmahZTEL_6e0cka8",
+          authDomain: "dairy-mangement.firebaseapp.com",
+          databaseURL: "https://dairy-mangement-default-rtdb.firebaseio.com",
+          projectId: "dairy-mangement",
+          storageBucket: "dairy-mangement.appspot.com",
+          messagingSenderId: "259568622943",
+          appId: "1:259568622943:web:f01ba428c4c6ebd191aaea"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        import{getDatabase, ref, set, get, update, remove} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+        const db=getDatabase();
+        
+        // -----------------------------formhtml----------------------------------------
+
+        let memcode=document.getElementById('memno')
+        let memname=document.getElementById('memname')
+        let sbtn=document.getElementById('sbtn')
+        let ubtn=document.getElementById('ubtn')
+        let dbtn=document.getElementById('dbtn')
+
+    //   -----------------------------insert---------------------------------------------
+
+    function insertData(){
+        set(ref(db,"MemDetails/"+memcode.value),{
+            NameOfMember: memname.value
+        }).then(()=>{
+            alert("Data Entered succufully ");
+        }).catch((error)=>{
+            alert("Error:"+error);
+        });
+    }
+
+// ==================update=============================
+    function updateData(){
+        update(ref(db,"MemDetails/"+memcode.value),{
+            NameOfMember: memname.value
+        }).then(()=>{
+            alert("Data updated succufully ");
+        }).catch((error)=>{
+            alert("Error:"+error);
+        });
+    }
+
+// ----------------------Delete------------------------------------
+    function deleteData(){
+        remove(ref(db,"MemDetails/"+memcode.value),{
+        }).then(()=>{
+            alert("Data removed succufully ");
+        }).catch((error)=>{
+            alert("Error:"+error);
+        });
+    }
+    
+    sbtn.addEventListener('click',insertData)
+    ubtn.addEventListener('click',updateData)
+    dbtn.addEventListener('click',deleteData)
+
+  </script>
+</body>
+</html>

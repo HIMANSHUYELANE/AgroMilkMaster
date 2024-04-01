@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="addmem.html">
+    <title>Daily Collection</title>
+</head>
+<body>
+    <h1 class="text-center font-bold text-3xl ">Daily Collection Billing</h1>
+    <section class="sm:flex py-5 my-5 sm:justify-evenly justify-center  border-t-2 border-black border-b-2 ">
+    <div class="space-y-5 mx-7 sm:mx-0">
+            <label for="choices1">Choose Shift : </label>
+            <select class="border-2 rounded-md px-1 ml-[28px]" id="choices1" name="choices">
+                <option value="Morning">Morning</option>
+                <option value="Night">Night</option>
+            </select><br>
+
+            <label for="">Date : </label>
+            <input  class="border-2 rounded-md px-1 ml-[83px]" type="date" name="" id="date" type="manual"><br>
+
+            <label for="">Member Code : </label>
+            <input class="border-2 rounded-md px-1 mx-4" id="code" type="number" placeholder="Code"><br>
+
+            <label for="">Milk Type : </label>
+            <select id="choices2" class="border-2 px-1 rounded-md mx-12" name="choices">
+                <option value="cow">Cow</option>
+                <option value="buff">Buff</option>
+            </select><br>
+
+            <label for="">FAT % : </label>
+            <input class="border-2 rounded-md px-1 ml-[73px]" id="fat" type="number" placeholder="fat"><br>
+
+            <label for="">SNF % : </label>
+            <input class="border-2 rounded-md px-1 ml-[69px]" id="snf" type="number" placeholder="snf"><br>
+
+            <label for="">Quantity : </label>
+            <input class="border-2 rounded-md px-1 ml-[53px]" id="qua" type="number" placeholder="quatity"><br>
+
+            <button  id="btn" class="border-2 border-black rounded-md px-1 rounded-lg px-1">Calculate</button>
+    </div>
+
+    <div class="mx-16 sm:mx-0 md:flex" id="output">
+      <p  class="h-[22rem]"></p><br>
+    </div>
+    
+</section>
+<div class="w-[65%] mx-auto flex justify-center ">
+    <button id="print" class=" rounded-lg self-center border-2 border-black px-4 py-1 font-semibold text-xl">Print</button> 
+    <button  class=" rounded-lg mx-2 self-center border-2 border-black px-4 py-1 font-semibold text-xl"><a href="addmem.html">Add Member</a></button>
+</div>
+
+
+    <script type="module" src="daily.js"></script>
+
+</body>
+</html>

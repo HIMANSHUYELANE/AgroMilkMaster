@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sign in</title>
+</head>
+<body class="bg-black">
+    
+        <fieldset class=" my-[5rem] w-[60%] md:w-[40%] mx-auto">
+            <legend class="text-cyan-300  font-semibold text-3xl ">Log in</legend>
+            <form class="">
+            <div class="flex py-7 bg-slate-900 flex-col text-center space-y-3 ">
+                <img class="w-[6rem] mx-auto" src="images/login_user.png" alt="">
+                <label class="text-md text-white" for="">Enter The User Name</label>
+                <input id="email" class="border-b-2 border-black outline-none md:w-[15rem] bg-slate-950 px-2 py-1 text-white focus:border-cyan-300 focus:rounded-lg hover:border-b-2  mx-auto"  type="text" placeholder="User_Name">
+                <label class="text-md text-white" for="">Enter The Password</label>
+                <input id="pass"  class="border-b-2 border-black outline-none md:w-[15rem] bg-slate-950 px-2 py-1 text-white focus:border-cyan-300 focus:rounded-lg hover:border-b-2  mx-auto" type="password" autocomplete placeholder="Password">
+                <button id="sbtn" class="w-[5rem] mx-auto border-2 border-cyan-300 bg-cyan-300 hover:bg-transparent rounded-md font-semibold text-lg hover:text-white">Log In</button>
+            </div>
+        </form>
+        </fieldset>
+        <script src="monthly.js" type="module"></script>
+</body>
+</html>

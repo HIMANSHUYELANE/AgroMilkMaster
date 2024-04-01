@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Create Account</title>
+    <style>
+      @keyframes pulse {
+  0% , 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+#pop{
+animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) 1;
+}
+    </style>
+</head>
+<body class="bg-slate-950">
+  <fieldset class=" sm:w-[55%] my-[3rem] w-[80%] mx-auto">
+    <legend class=" font-semibold text-2xl sm:text-3xl text-cyan-300">Create Account</legend>
+    <form class="bg-slate-800 py-[1rem] space-y-4 text-center">
+      <img class=" mx-auto w-[5rem] sm:w-[6rem] my-2" src="images/login_user.png" alt="">
+        <div class="space-y-2">
+
+        <label class="text-white font-semibold text-lg " for="">Enter Your Name</label><br>
+        <input id="fname" class="bg-slate-950 outline-none text-white mx-2 border-b-2 border-black focus:border-cyan-300 focus:rounded-r-md focus:rounded-l-md p-1 rounded-md px-2" type="text" placeholder="First Name">
+        <input id="sname" class="bg-slate-950 outline-none text-white mx-2 border-b-2 border-black focus:border-cyan-300 focus:rounded-r-md focus:rounded-l-md rounded-md p-1" type="text" placeholder="Last Name">
+
+        </div>
+        <div class="flex flex-col space-y-2">
+
+          <label class="text-white font-semibold text-lg " for="">E-mail</label>
+          <input id="email" class="bg-slate-950 outline-none focus:rounded-l-md focus:rounded-r-md focus:border-cyan-300 px-2 text-white w-[13rem] border-b-2 border-black rounded-md p-1 mx-auto" type="text" placeholder="E-mail">
+
+          <label class="text-white font-semibold text-lg" for="">Password</label>
+          <input id="pass" class="bg-slate-950 outline-none focus:rounded-l-md focus:rounded-r-md focus:border-cyan-300 px-2 text-white w-[13rem] border-b-2 border-black rounded-md p-1 mx-auto" type="password" placeholder="Create Password">
+
+          <button id="sbtn" type="submit" class="font-semibold text-lg px-4 my-6 text-center bg-cyan-300 mx-auto w-[6rem] border-2 rounded-md border-cyan-300 hover:text-white hover:bg-transparent">Create</button>
+        </div>
+      </form>
+  </fieldset>
+
+  <section id="pop" class=" hidden absolute bg-lime-300 right-[5rem] top-[1rem] h-[3rem] rounded-lg shadow-xl shadow-lime-500/50 w-[14rem]">
+    <p class="my-3 text-center">Accound Created Succesfully</p>
+</section>
+
+    <script src="join.js" type="module"></script>
+</body>
+</html>

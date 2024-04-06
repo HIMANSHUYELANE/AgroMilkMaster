@@ -50,15 +50,13 @@ const addData = async () => {
         secondWAmount: secondWAmount.value,
         thirdWAmount: thirdWAmount.value,
       });
-
+      alert("Data Added Succussfully");
       console.log("Document written with ID:");
-      pop1.classList.remove("hidden");
     } catch (e) {
       console.error("Error adding document: ", e);
     }
   } else {
-    // alert("Account not exists!!");
-    pop4.classList.toggle("hidden");
+    alert("Account not exists!!");
   }
 };
 
@@ -81,15 +79,14 @@ const updateData = async () => {
         secondWAmount: secondWAmount.value,
         thirdWAmount: thirdWAmount.value,
       });
+      alert("Data Updated Succussfully");
 
       console.log("Document written with ID:");
-      pop2.classList.toggle("hidden");
     } catch (e) {
       console.error("Error adding document: ", e);
     }
   } else {
     // alert("Account not exists!!");
-    pop4.classList.toggle("hidden");
   }
 };
 
@@ -105,15 +102,13 @@ const deleteData = async () => {
 
     try {
       await deleteDoc(doc(db, Id.value, monthRef), {});
-
+      alert("Data Deleted Succussfully");
       console.log("Document written with ID:");
-      pop3.classList.toggle("hidden");
     } catch (e) {
       console.error("Error adding document: ", e);
     }
   } else {
     // alert("Account not exists!!");
-    pop4.classList.toggle("hidden");
   }
 };
 
